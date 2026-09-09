@@ -1,0 +1,16 @@
+{
+  "name": "jade-tile-fortune-v2-cloudflare",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Original mahjong-inspired virtual coin demo for Cloudflare Pages",
+  "scripts": {
+    "dev": "wrangler pages dev public --kv=GAME_KV",
+    "check": "node --check public/js/engine.js && node --check public/js/game.js && node --check public/js/admin.js && node --check functions/api/config.js && node --check functions/api/admin/config.js",
+    "simulate": "node tools-simulate.mjs",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.28.0"
+  }
+}
